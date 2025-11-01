@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Josefin Sans", sans-serif;
+}
+
+/* Global base styles — no @apply in v4 base layers */
+html {
+  font-family: var(--font-sans);
+  color: white;
+  background-color: black;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+p {
+  color: rgb(229 231 235); /* text-gray-200 */
+  line-height: 1.6;
+}
+
+a {
+  color: white;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: rgb(220 38 38); /* red-600 */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.4);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+#dropdown {
+  color: black;
+}
