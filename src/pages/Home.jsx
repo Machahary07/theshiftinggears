@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import RelatedCars from "../components/HomeCars";
 import Services from "../pages/Services";
+import Faqs from "../components/Faqs";
 
 export default function Home() {
   return (
@@ -60,6 +61,9 @@ export default function Home() {
         </div>
         <div>
           <Services />
+        </div>
+        <div>
+          <Faqs />
         </div>
       </section>
     </div>
