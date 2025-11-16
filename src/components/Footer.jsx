@@ -29,6 +29,7 @@ export default function Footer() {
               <a href="/services" className="hover:text-red-600 transition">Services</a>
               <a href="/gallery" className="hover:text-red-600 transition">Gallery</a>
               <a href="/baraatis" className="hover:text-red-600 transition">Baraatis</a>
+              <a href="/emi-calculator" className="hover:text-red-600 transition">EMI Calculator</a>
               <a href="/contact" className="hover:text-red-600 transition">Contact</a>
             </div>
           </div>
@@ -77,16 +78,7 @@ export default function Footer() {
 
         {/* Bottom Line */}
         <div className="mt-10 text-center text-xs text-gray-500">
-          © {new Date().getFullYear()} Designed & Maintained by{" "}
-          <a
-            href="https://themanki.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-purple-500 hover:text-purple-600 font-medium"
-          >
-            TheManki
-          </a>{" "}
-          — All rights reserved.
+          © {new Date().getFullYear()} Shifting Gears — All rights reserved.
         </div>
       </div>
     </footer>

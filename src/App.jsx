@@ -11,6 +11,7 @@ import Services from "./pages/Services";
 import LogoMarquee from "./components/LogoMarquee";
 import Contact from "./pages/Contact";
 import Baaratis from "./pages/Baaratis";
+import EmiCalculator from "./pages/EmiCalculator";
 
 export default function App() {
   const logos = [
@@ -47,6 +48,7 @@ export default function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/baraatis" element={<Baaratis />} />
+            <Route path="/emi-calculator" element={<EmiCalculator />} />
           </Routes>
         </main>
 

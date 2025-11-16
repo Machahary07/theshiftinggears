@@ -196,7 +196,7 @@ export default function Navbar() {
             : "bg-black"
         }`}
       >
-        <div className="max-w-[1480px] mx-auto flex items-center justify-between px-4 md:px-6 py-4">
+        <div className="max-w-[1480px] mx-auto flex items-center justify-between px-4 md:px-6 py-6">
           {/* Left: Hamburger */}
           <div className="flex items-center">
             <button
@@ -309,14 +309,14 @@ export default function Navbar() {
       {/* 🔹 Red overlay */}
       <div
         ref={overlayRedRef}
-        className="fixed top-[72px] left-0 w-full h-[60vh] z-45 bg-red-600"
+        className="fixed top-[110px] left-0 w-full h-[60vh] z-45 bg-red-600"
         style={{ transformOrigin: "top" }}
       />
 
       {/* 🔹 Black overlay */}
       <div
         ref={overlayBlackRef}
-        className="fixed top-[72px] left-0 w-full h-[60vh] z-50 bg-black text-white"
+        className="fixed top-[110px] left-0 w-full h-[60vh] z-50 bg-black text-white"
         style={{
           transformOrigin: "top",
           backgroundImage:
@@ -345,6 +345,9 @@ export default function Navbar() {
             </a>
             <a href="/Baraatis" className="block hover:text-red-600 transition">
               Baraatis
+            </a>
+            <a href="/emi-calculator" className="block hover:text-red-600 transition">
+              EMI Calculator
             </a>
             <a href="/contact" className="block hover:text-red-600 transition">
               Contact
@@ -392,7 +395,7 @@ export default function Navbar() {
       </div>
 
       {/* Spacer */}
-      <div className="h-[72px]" aria-hidden="true" />
+      <div className="h-[110px]" aria-hidden="true" />
     </>
   );
 }
