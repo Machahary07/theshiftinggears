@@ -196,7 +196,7 @@ export default function Navbar() {
             : "bg-black"
         }`}
       >
-        <div className="max-w-[1200px] mx-auto flex items-center justify-between px-4 md:px-6 py-4">
+        <div className="max-w-[1480px] mx-auto flex items-center justify-between px-4 md:px-6 py-4">
           {/* Left: Hamburger */}
           <div className="flex items-center">
             <button

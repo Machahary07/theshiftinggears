@@ -13,10 +13,11 @@ export default function RelatedCars({ currentCarId }) {
       </div>
       <div className="grid sm:grid-cols-3 gap-6">
         {related.map((car) => (
-          <Link key={car.id} to={`/car/${car.id}`} className="bg-black/40 rounded-xl overflow-hidden">
+          <Link key={car.id} to={`/car/${car.id}`} className="bg-black/40 border-2 border-red-600 rounded-xl overflow-hidden hover:scale-105 transition">
             <img src={car.image} alt={car.model} className="h-44 w-full object-cover" />
-            <div className="p-3">
+            <div className="p-4">
               <p className="text-lg font-medium">{car.make} {car.model}</p>
+              <p className="text-xl font-bold text-red-500 mt-2">{car.price}</p>
             </div>
           </Link>
         ))}

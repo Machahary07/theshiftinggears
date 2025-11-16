@@ -26,9 +26,12 @@ export default function RelatedCars({ currentCarId }) {
               alt={car.model}
               className="h-64 w-full object-cover"
             />
-            <div className="p-3">
+            <div className="p-4">
               <p className="text-lg font-medium text-black">
                 {car.make} {car.model}
+              </p>
+              <p className="text-xl font-bold text-white mt-2">
+                {car.price}
               </p>
             </div>
           </Link>

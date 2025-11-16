@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+
 import Home from "./pages/Home";
 import Inventory from "./pages/Inventory";
 import CarDetails from "./pages/CarDetails";
@@ -33,12 +34,11 @@ export default function App() {
         className="relative min-h-screen flex flex-col bg-black/20 text-white overflow-hidden"
         style={{ fontFamily: "var(--site-font)" }}
       >
-        {/* 🌙 Navbar */}
         <Navbar />
 
-        {/* 🎬 Main Content */}
         <main className="flex-1 relative z-10">
           <Routes>
+            {/* 🌍 PUBLIC WEBSITE ROUTES */}
             <Route path="/" element={<Home />} />
             <Route path="/inventory" element={<Inventory />} />
             <Route path="/car/:id" element={<CarDetails />} />
@@ -46,15 +46,11 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
-            {/* alias for common typo */}
             <Route path="/baraatis" element={<Baaratis />} />
           </Routes>
         </main>
 
-        {/* ✨ Company Logos Marquee */}
         <LogoMarquee logos={logos} speed={60} height={50} />
-
-        {/* 🦶 Footer */}
         <Footer />
       </div>
     </Router>

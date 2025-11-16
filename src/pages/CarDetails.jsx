@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { cars } from "../data/cars";
 import RelatedCars from "../components/RelatedCars";
+import { Link } from "react-router-dom";
+
 import {
   X,
   ZoomIn,
@@ -86,9 +88,15 @@ export default function CarDetails() {
         {/* 🧾 RIGHT SECTION */}
         <div className="flex flex-col justify-between border border-red-600 rounded-lg p-6">
           <div>
-            <h1 className="text-3xl font-semibold mb-4">
+            <h1 className="text-3xl font-semibold mb-2">
               {car.make} {car.model}
             </h1>
+            
+            {/* Price Display */}
+            <p className="text-3xl font-bold text-red-500 mb-6">
+              {car.price}
+            </p>
+            
             <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
               <li><strong>Registration Year:</strong> {car.yom}</li>
               <li><strong>Ownership:</strong> {car.ownership}</li>
@@ -103,9 +111,11 @@ export default function CarDetails() {
           </div>
 
           {/* ✅ Book Now Button */}
-          <button className="bg-red-600 text-white w-full mt-8 py-3 rounded-md font-semibold hover:bg-red-700 transition">
-            Book Now
-          </button>
+          <Link to="/contact">
+            <button className="bg-red-600 text-white w-full mt-8 py-3 rounded-md font-semibold hover:bg-red-700 transition">
+              Book Now
+            </button>
+          </Link>
         </div>
       </div>
 

@@ -420,13 +420,13 @@ export default function DomeGallery({
         pointer-events: none;
         margin: 0;
         transform: none;
-        filter: ${grayscale ? 'grayscale(1)' : 'none'};
+        filter: 'none'};
       `;
 
       const originalImg = overlay.querySelector('img');
       if (originalImg) {
         const img = originalImg.cloneNode();
-        img.style.cssText = 'width: 100%; height: 100%; object-fit: cover;';
+        img.style.cssText = 'width: 100%; height: 100%; object-fit: contain;';
         animatingOverlay.appendChild(img);
       }
 
@@ -563,6 +563,9 @@ export default function DomeGallery({
     overlay.style.transition = `transform ${enlargeTransitionMs}ms ease, opacity ${enlargeTransitionMs}ms ease`;
     overlay.style.borderRadius = openedImageBorderRadius;
     overlay.style.overflow = 'hidden';
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
     overlay.style.boxShadow = '0 10px 30px rgba(0,0,0,.35)';
 
     const rawSrc = parent.dataset.src || el.querySelector('img')?.src || '';
@@ -572,8 +575,8 @@ export default function DomeGallery({
     img.alt = rawAlt;
     img.style.width = '100%';
     img.style.height = '100%';
-    img.style.objectFit = 'cover';
-    img.style.filter = grayscale ? 'grayscale(1)' : 'none';
+    img.style.objectFit = 'contain';
+    img.style.filter = 'none';
     overlay.appendChild(img);
     viewerRef.current.appendChild(overlay);
 
@@ -741,7 +744,7 @@ export default function DomeGallery({
           ['--overlay-blur-color']: overlayBlurColor,
           ['--tile-radius']: imageBorderRadius,
           ['--enlarge-radius']: openedImageBorderRadius,
-          ['--image-filter']: grayscale ? 'grayscale(1)' : 'none'
+          ['--image-filter']: 'none'
         }}
       >
         <main
@@ -808,7 +811,7 @@ export default function DomeGallery({
                       className="w-full h-full object-cover pointer-events-none"
                       style={{
                         backfaceVisibility: 'hidden',
-                        filter: `var(--image-filter, ${grayscale ? 'grayscale(1)' : 'none'})`
+                        filter: `var(--image-filter : 'none'})`
                       }}
                     />
                   </div>
